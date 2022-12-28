@@ -1,0 +1,8 @@
+path = google
+range = u^2 sin2x/g
+max height = u^2sin^2x/2g
+time of flight = 2usinx/g
+time to reach max height = usinx/g
+
+X=vcosθt
+Y=vsinθt−(gt^2)/2

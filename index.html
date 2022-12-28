@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Projectile Motion Visualisation
+        </title>
+        <style>
+            body {
+                background-color: black;
+                color: aliceblue;
+            }
+            canvas {
+                background-color: #F08080;
+                position: relative;
+                top: 20%;
+                left: 20%;
+            }
+        </style>
+    </head>
+    <body>
+        <canvas id="canvas" width =1000px height=500></canvas>
+        <script src="index.js"></script>
+        <h1>
+            Projectile Motion
+        </h1>
+
+        <p>
+            Range: <span id="range">0</span>
+        </p>
+
+        <p>
+            Maximum Height: <span id="maxheight">0</span>
+        </p>
+
+        <p>
+            Time of Flight: <span id="tof">0</span>
+        </p>
+
+        <input name="speed" type="text" maxlength="512" id="speedVal" placeholder="Enter Speed Value (m/s)"/>
+        <input name="angle" type="text" maxlength="512" id="angleVal" placeholder="Enter the angle (deg)"/>
+        <button onclick="run()">Run</button>
+        <button onclick="window.location.reload()">Clear Canvas</button>
+    </body>
+</html>
