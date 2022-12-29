@@ -42,21 +42,22 @@ function run() {
     //height
     draw((ix+range(s, a))/2, iy-height(s, a));
 }
+
 function range(speed, angle) {
     angle = degToRad(angle);
-    return (Math.pow(speed, 2) * Math.sin(angle * 2))/g;
+    return Math.round((Math.pow(speed, 2) * Math.sin(angle * 2))/g);
 }
 
 //Max Height
 function height(speed, angle){
     angle = degToRad(angle);
-    return (Math.pow(speed, 2) * Math.pow(Math.sin(angle), 2))/(2*g);
+    return Math.round((Math.pow(speed, 2) * Math.pow(Math.sin(angle), 2))/(2*g));
 }
 
 //Time of flight
 function timeofflight(speed, angle){
     angle = degToRad(angle);
-    return (2 * speed * Math.sin(angle))/g;
+    return Math.round((2 * speed * Math.sin(angle))/g);
 }
 
 //y coord at certain time
@@ -85,15 +86,16 @@ function draw(x , y){
     if(y === 480){
         path(x, y);
     } else {
-        //make our ball
+        //make our ball (FOR MAX HEIGHT)
         ctx.beginPath();
         ctx.strokeStyle = "white";
         ctx.arc(x, y, radius, 0, Math.PI * 2);
         ctx.stroke();
 
-        //returns time value to sub in c and y posi equations
+        //Code to make the curved parabola
         s = document.getElementById('speedVal').value;
         a = document.getElementById('angleVal').value;
+        //returns time value to sub in c and y posi equations
         for (let i = 0; i <= (timeofflight(s, a)+1); i++) {
             //path(ix+x_coord(s, a, i), iy-y_coord(s, a, i));
 
