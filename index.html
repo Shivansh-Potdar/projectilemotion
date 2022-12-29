@@ -1,44 +1,56 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>
-            Projectile Motion Visualisation
-        </title>
-        <style>
-            body {
-                background-color: black;
-                color: aliceblue;
-            }
-            canvas {
-                background-color: #F08080;
-                position: relative;
-                top: 20%;
-                left: 20%;
-            }
-        </style>
-    </head>
-    <body>
-        <canvas id="canvas" width =1000px height=500></canvas>
-        <script src="index.js"></script>
-        <h1>
-            Projectile Motion
-        </h1>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="styles.css">
+    <title>Projectile Motion Visualization</title>
+  </head>
+  <body>
+    <canvas id="canvas" width="1000" height="500"></canvas>
+    <script src="index.js"></script>
+    <header>
+      <h1>Projectile Motion</h1>
+    </header>
 
-        <p>
-            Range: <span id="range">0</span>
-        </p>
-
-        <p>
-            Maximum Height: <span id="maxheight">0</span>
-        </p>
-
-        <p>
-            Time of Flight: <span id="tof">0</span>
-        </p>
-
-        <input name="speed" type="text" maxlength="512" id="speedVal" placeholder="Enter Speed Value (m/s)"/>
-        <input name="angle" type="text" maxlength="512" id="angleVal" placeholder="Enter the angle (deg)"/>
-        <button onclick="run()">Run</button>
-        <button onclick="window.location.reload()">Clear Canvas</button>
-    </body>
+    <main>
+      <form>
+        <div>
+          <label for="speedVal">Enter Speed Value (m/s):</label>
+          <input
+            name="speed"
+            type="number"
+            id="speedVal"
+            placeholder="Enter Speed Value (m/s)"
+          />
+        </div>
+        <div>
+          <label for="angleVal">Enter the angle (deg):</label>
+          <input
+            name="angle"
+            type="number"
+            id="angleVal"
+            placeholder="Enter the angle (deg)"
+          />
+        </div>
+        <div>
+          <button type="button" onclick="run()">Run</button>
+          <button type="reset">Clear Canvas</button>
+        </div>
+      </form>
+      <section>
+        <div>
+          <p>Range:</p>
+          <p id="range">0</p>
+        </div>
+        <div>
+          <p>Maximum Height:</p>
+          <p id="maxheight">0</p>
+        </div>
+        <div>
+          <p>Time of Flight:</p>
+          <p id="tof">0</p>
+        </div>
+      </section>
+    </main>
+  </body>
 </html>
