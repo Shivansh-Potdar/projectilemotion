@@ -1,0 +1,99 @@
+body {
+  background-color: #282c34;
+  color: white;
+  font-family: sans-serif;
+  margin: 0;
+}
+
+ .border {
+  border: 5px solid red;
+  padding: 20px;
+}
+
+
+header {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  padding: 1rem 0;
+}
+
+h1 {
+  font-size: 2rem;
+  margin: 0;
+}
+
+main {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1rem 0;
+}
+
+form {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+form > div {
+  display: flex;
+  margin: 0.5rem 0;
+}
+
+label {
+  font-size: 1.2rem;
+  margin-right: 0.5rem;
+}
+
+input[type="number"] {
+  border: none;
+  border-bottom: 2px solid white;
+  font-size: 1.2rem;
+  outline: none;
+  padding: 0.5rem;
+  width: 20rem;
+}
+
+button {
+  background-color: #61dafb;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  cursor: pointer;
+  font-size: 1.2rem;
+  padding: 0.5rem;
+  transition: background-color 0.2s;
+}
+
+button:hover {
+  background-color: #2196f3;
+}
+
+section {
+  align-items: flex-start;
+  display: flex;
+  justify-content: space-between;
+  width: 20rem;
+}
+
+section > div {
+  display: flex;
+  margin-right: 1rem;
+}
+
+section > div:last-child {
+  margin-right: 0;
+}
+
+section p:first-of-type {
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+section p:last-of-type {
+  font-size: 2rem;
+  margin: 0;
+}
