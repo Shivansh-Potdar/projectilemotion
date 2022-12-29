@@ -1,56 +1,52 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
+<head>
     <link rel="stylesheet" href="styles.css">
-    <title>Projectile Motion Visualization</title>
-  </head>
-  <body>
-    <canvas id="canvas" width="1000" height="500"></canvas>
-    <script src="index.js"></script>
-    <header>
-      <h1>Projectile Motion</h1>
-    </header>
-
-    <main>
-      <form>
-        <div>
-          <label for="speedVal">Enter Speed Value (m/s):</label>
-          <input
-            name="speed"
-            type="number"
-            id="speedVal"
-            placeholder="Enter Speed Value (m/s)"
-          />
-        </div>
-        <div>
-          <label for="angleVal">Enter the angle (deg):</label>
-          <input
-            name="angle"
-            type="number"
-            id="angleVal"
-            placeholder="Enter the angle (deg)"
-          />
-        </div>
-        <div>
-          <button type="button" onclick="run()">Run</button>
-          <button type="reset">Clear Canvas</button>
-        </div>
-      </form>
-      <section>
-        <div>
-          <p>Range:</p>
-          <p id="range">0</p>
-        </div>
-        <div>
-          <p>Maximum Height:</p>
-          <p id="maxheight">0</p>
-        </div>
-        <div>
-          <p>Time of Flight:</p>
-          <p id="tof">0</p>
-        </div>
-      </section>
-    </main>
-  </body>
+  <title>My Professional Website</title>
+</head>
+<body>
+  <h1>Projectile Motion Visualization</h1>
+  <canvas id="canvas" width="1499" height="500"></canvas>
+  <script src="index.js"></script>
+  <div class="side-by-side">
+  <form>
+    <div class="form-row">
+      <label for="speedVal">Enter Speed Value (m/s):</label>
+      <input
+        name="speed"
+        type="number"
+        id="speedVal"
+        placeholder="Enter Speed Value (m/s)"
+      />
+    </div>
+    <div class="form-row">
+      <label for="angleVal">Enter the angle (deg):</label>
+      <input
+        name="angle"
+        type="number"
+        id="angleVal"
+        placeholder="Enter the angle (deg)"
+      />
+    </div>
+    <div class="form-row">
+      <button type="button" onclick="run()">Run</button>
+      <button type="reset">Clear Canvas</button>
+    </div>
+  </form>
+  <div class="result">
+    <div class="result-row">
+      <p class="result-label">Range:</p>
+      <p class="result-value" id="range">0</p>
+    </div>
+    <div class="result-row">
+      <p class="result-label">Maximum Height:</p>
+      <p class="result-value" id="maxheight">0</p>
+    </div>
+    <div class="result-row">
+      <p class="result-label">Time of Flight:</p>
+      <p class="result-value" id="tof">0</p>
+    </div>
+  </div>
+</div>
+</body>
 </html>
